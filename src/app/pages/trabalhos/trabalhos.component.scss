@@ -1,0 +1,166 @@
+// Carousel Styles
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-shell {
+  padding: 10px;
+  border-radius: 20px;
+  background: radial-gradient(1200px 300px at 50% -50%, rgba(59,130,246,0.08), transparent),
+              radial-gradient(1000px 260px at 50% 120%, rgba(168,85,247,0.06), transparent);
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+.carousel-track {
+  display: flex;
+  transition: none; // Disable CSS transitions for smooth JS animation
+  will-change: transform;
+}
+
+.carousel-item {
+  flex-shrink: 0;
+  width: 300px;
+  margin-right: 20px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 640px) {
+    width: 280px;
+    margin-right: 16px;
+  }
+}
+
+.portfolio-card {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  padding: 16px 18px;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.portfolio-description {
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.4;
+  margin: 0;
+}
+
+// Pause animation on hover
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 260px;
+    margin-right: 12px;
+  }
+  
+  .portfolio-image {
+    height: 180px;
+  }
+  
+  .portfolio-overlay {
+    padding: 14px 16px;
+  }
+  
+  .portfolio-title {
+    font-size: 16px;
+  }
+  
+  .portfolio-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 240px;
+    margin-right: 10px;
+  }
+  
+  .portfolio-image {
+    height: 160px;
+  }
+}
+
+// Estilos específicos para a página de trabalhos
+.section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.trabalho-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.category-filter {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.tech-tag {
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}

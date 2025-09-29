@@ -1,0 +1,29 @@
+<div class="min-h-screen bg-dark-900" id="funcionalidades">
+  <app-header *ngIf="!embedded"></app-header>
+  
+  <!-- Hero Section -->
+  <section class="pt-20 pb-16 bg-gradient-to-br from-dark-800 to-dark-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Funcionalidades do seu <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">site profissional</span>
+      </h1>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+        Tudo que você precisa para ter um site completo e funcional 
+        para seu negócio.
+      </p>
+    </div>
+  </section>
+
+  <!-- Funcionalidades Grid -->
+  <section class="py-16 bg-dark-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <app-card-feature *ngFor="let feature of features" [feature]="feature"></app-card-feature>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section removida a pedido do cliente -->
+
+  <app-footer *ngIf="!embedded"></app-footer>
+</div>

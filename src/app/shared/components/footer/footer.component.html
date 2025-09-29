@@ -1,0 +1,86 @@
+<footer class="bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-white relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-400 to-accent-400 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-accent-400 to-primary-400 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- Logo e Descrição -->
+      <div class="col-span-1 md:col-span-2">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center shadow-large">
+            <span class="text-white font-bold text-xl">S</span>
+          </div>
+          <h3 class="text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            SistemaPro
+          </h3>
+        </div>
+        <p class="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
+          Modernize seu negócio com nosso sistema personalizável. 
+          Soluções completas para empresas que buscam eficiência e crescimento.
+        </p>
+        
+      </div>
+
+      <!-- Links Rápidos -->
+      <div>
+        <h4 class="text-xl font-bold text-white mb-6">Links Rápidos</h4>
+        <ul class="space-y-3">
+          <li><a routerLink="/" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">Home</a></li>
+          <li><a routerLink="/funcionalidades" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">Funcionalidades</a></li>
+          <li><a routerLink="/sobre" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">Sobre</a></li>
+          <li><a routerLink="/trabalhos" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">Trabalhos</a></li>
+          <li><a routerLink="/contato" class="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div>
+        <h4 class="text-xl font-bold text-white mb-6">Contato</h4>
+        <div class="space-y-4">
+          <div class="flex items-center space-x-4 group">
+            <div class="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary-500/30 transition-colors duration-200">
+              <lucide-icon [name]="'phone'" [size]="18" class="text-primary-400"></lucide-icon>
+            </div>
+            <div>
+              <p class="text-gray-300 font-medium">+55 48 98828-1035</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 group">
+            <div class="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary-500/30 transition-colors duration-200">
+              <lucide-icon [name]="'message-circle'" [size]="18" class="text-primary-400"></lucide-icon>
+            </div>
+            <div>
+              <p class="text-gray-300 font-medium">WhatsApp</p>
+              <p class="text-gray-400 text-sm">Resposta em até 24h</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 group">
+            <div class="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center group-hover:bg-primary-500/30 transition-colors duration-200">
+              <lucide-icon [name]="'map-pin'" [size]="18" class="text-primary-400"></lucide-icon>
+            </div>
+            <div>
+              <p class="text-gray-300 font-medium">Florianópolis, SC</p>
+              <p class="text-gray-400 text-sm">Atendimento remoto em todo o país</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linha Divisória -->
+    <div class="border-t border-gray-700/50 mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          © {{ currentYear }} SistemaPro. Todos os direitos reservados.
+        </p>
+        <div class="flex space-x-8 mt-4 md:mt-0">
+          <a routerLink="/termos" class="text-gray-400 hover:text-white text-sm transition-colors duration-200 hover:underline">Termos de Uso</a>
+          <a routerLink="/privacidade" class="text-gray-400 hover:text-white text-sm transition-colors duration-200 hover:underline">Política de Privacidade</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,98 @@
+<header class="bg-dark-900/95 backdrop-blur-md shadow-soft fixed w-full top-0 z-50 border-b border-dark-700">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-18">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a routerLink="/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-medium group-hover:shadow-large transition-all duration-300">
+            <span class="text-white font-bold text-lg">S</span>
+          </div>
+          <span class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+            SistemaPro
+          </span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-1">
+          <a routerLink="/" fragment="home" routerLinkActive="text-primary-400" 
+             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
+            Home
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-4"></span>
+          </a>
+          <a routerLink="/" fragment="funcionalidades" routerLinkActive="text-primary-400"
+             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
+            Funcionalidades
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
+          </a>
+          <a routerLink="/" fragment="sobre" routerLinkActive="text-primary-400"
+             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
+            Sobre
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
+          </a>
+          <a routerLink="/" fragment="trabalhos" routerLinkActive="text-primary-400"
+             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
+            Trabalhos
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
+          </a>
+          <a routerLink="/" fragment="contato" routerLinkActive="text-primary-400"
+             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
+            Contato
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
+          </a>
+        </div>
+      </div>
+
+          <!-- CTA Button -->
+          <div class="hidden md:block">
+            <a routerLink="/" fragment="contato"
+               class="bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:from-primary-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2 group">
+              <span>Quero Conhecer</span>
+              <lucide-icon [name]="'arrow-right'" [size]="16" class="group-hover:translate-x-1 transition-transform duration-200"></lucide-icon>
+            </a>
+          </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden menu-container">
+        <button (click)="toggleMenu()" 
+                class="text-gray-300 hover:text-primary-400 focus:outline-none focus:text-primary-400 p-2 rounded-lg hover:bg-dark-800 transition-all duration-200">
+          <lucide-icon [name]="isMenuOpen ? 'x' : 'menu'" [size]="24"></lucide-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden transition-all duration-300 ease-in-out" 
+         [class.max-h-0]="!isMenuOpen" 
+         [class.max-h-96]="isMenuOpen"
+         [class.overflow-hidden]="!isMenuOpen">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-800/95 backdrop-blur-md border-t border-dark-700">
+        <a routerLink="/" fragment="home" (click)="closeMenu()"
+           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+          Home
+        </a>
+        <a routerLink="/" fragment="funcionalidades" (click)="closeMenu()"
+           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+          Funcionalidades
+        </a>
+        <a routerLink="/" fragment="sobre" (click)="closeMenu()"
+           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+          Sobre
+        </a>
+        <a routerLink="/" fragment="trabalhos" (click)="closeMenu()"
+           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+          Trabalhos
+        </a>
+        <a routerLink="/" fragment="contato" (click)="closeMenu()"
+           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+          Contato
+        </a>
+        <a routerLink="/" fragment="contato" (click)="closeMenu()"
+           class="bg-gradient-to-r from-primary-600 to-accent-600 text-white block px-4 py-3 text-base font-semibold rounded-xl mt-4 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+          Quero Conhecer
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

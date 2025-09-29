@@ -1,0 +1,166 @@
+<div class="min-h-screen bg-dark-900" id="trabalhos">
+  <app-header *ngIf="!embedded"></app-header>
+  
+  <!-- Hero Section removido a pedido do cliente -->
+
+  
+
+  <!-- Carousel de Trabalhos -->
+  <section class="pt-12 pb-16 bg-dark-900 overflow-hidden mt-20 md:mt-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8 md:mb-12">
+        <p class="section-eyebrow">Portfólio</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 md:mb-10 tracking-tight">
+            Principais <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Projetos</span>
+          </h2>
+        <div class="max-w-3xl mx-auto px-2 mt-4 md:mt-6 lg:mt-8">
+          <h3 class="text-xl md:text-2xl font-semibold text-white mb-1.5">Projeto para Escola</h3>
+          <p class="text-base md:text-lg text-gray-300 leading-relaxed md:leading-8">
+            Sistema acadêmico completo com perfis de acesso (admin, professor e aluno). O admin gerencia
+            cadastros de alunos, professores, turmas e disciplinas; professores lançam notas e frequência;
+            alunos acessam boletim online com médias e presença. Inclui relatórios de desempenho e
+            frequência com exportação em PDF/Excel.
+          </p>
+        </div>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="relative carousel-shell mt-3 md:mt-4">
+        <div class="carousel-container">
+          <div class="carousel-track" [style.transform]="'translateX(' + translateX + 'px)'" [style.gap.px]="0">
+            <!-- First set of images -->
+            <div #portfolioItem class="carousel-item" *ngFor="let image of portfolioImages; let i = index">
+              <div class="portfolio-card" (click)="openModal('portfolio', i)">
+                <img [src]="image.src" [alt]="image.alt" class="portfolio-image">
+                <div class="portfolio-overlay">
+                  <div class="mt-3 text-primary-400 text-sm font-medium text-center">Clique para ampliar</div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicate set removido a pedido do cliente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Carousel Validata -->
+  <section class="pt-6 pb-16 bg-dark-900 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6 md:mb-8">
+        <div class="max-w-3xl mx-auto px-2 mt-4 md:mt-6 lg:mt-8">
+          <h3 class="text-xl md:text-2xl font-semibold text-white mb-1.5">Projeto Validata</h3>
+          <p class="text-base md:text-lg text-gray-300 leading-relaxed md:leading-8">
+            O Validata é um sistema de gestão voltado para o controle de validade de produtos em estabelecimentos comerciais. 
+            Seu objetivo principal é automatizar o monitoramento de prazos de validade, reduzindo perdas por vencimento e 
+            garantindo maior segurança no consumo.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative carousel-shell mt-3 md:mt-4">
+        <div class="carousel-container">
+          <div class="carousel-track" [style.transform]="'translateX(' + translateXValidata + 'px)'" [style.gap.px]="0">
+            <div #validataItem class="carousel-item" *ngFor="let image of validataImages; let i = index">
+              <div class="portfolio-card" (click)="openModal('validata', i)">
+                <img [src]="image.src" [alt]="image.alt" class="portfolio-image">
+                <div class="portfolio-overlay">
+                  <div class="mt-3 text-primary-400 text-sm font-medium text-center">Clique para ampliar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel Finance / IA -->
+  <section class="pt-6 pb-20 bg-dark-900 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-6 md:mb-8">
+        <div class="max-w-3xl mx-auto px-2 mt-4 md:mt-6 lg:mt-8">
+          <h3 class="text-xl md:text-2xl font-semibold text-white mb-1.5">Projeto IA Financeira e ERP</h3>
+          <p class="text-base md:text-lg text-gray-300 leading-relaxed md:leading-8">
+            Sistema que integra IA conversacional com ChatGPT, gestão de contratos e dashboard financeiro interativo, com integração ao WhatsApp Business API e design responsivo mobile-first.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative carousel-shell mt-3 md:mt-4">
+        <div class="carousel-container">
+          <div class="carousel-track" [style.transform]="'translateX(' + translateXFinance + 'px)'" [style.gap.px]="0">
+            <div #financeItem class="carousel-item" *ngFor="let image of financeImages; let i = index">
+              <div class="portfolio-card" (click)="openModal('finance', i)">
+                <img [src]="image.src" [alt]="image.alt" class="portfolio-image">
+                <div class="portfolio-overlay">
+                  <div class="mt-3 text-primary-400 text-sm font-medium text-center">Clique para ampliar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Visualização -->
+  <div *ngIf="isModalOpen" 
+       class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+       (click)="closeModal()"
+       (keydown)="onModalKeydown($event)"
+       tabindex="0">
+    
+    <div class="relative max-w-4xl max-h-full bg-dark-800 rounded-2xl overflow-hidden"
+         (click)="$event.stopPropagation()">
+      
+      <!-- Header do Modal -->
+      <div class="flex items-center justify-between p-6 border-b border-dark-600">
+        <h3 class="text-xl font-bold text-white">Galeria de Projetos</h3>
+        <button (click)="closeModal()" 
+                class="text-gray-400 hover:text-white transition-colors">
+          <lucide-icon [name]="'x'" [size]="24"></lucide-icon>
+        </button>
+      </div>
+      
+      <!-- Imagem Principal -->
+      <div class="relative">
+        <img [src]="modalCurrentImage" 
+             [alt]="'Projeto ' + (modalImageIndex + 1)"
+             class="w-full h-auto max-h-[70vh] object-contain">
+        
+        <!-- Botões de Navegação -->
+        <button (click)="prevModalImage()" 
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300">
+          <lucide-icon [name]="'chevron-left'" [size]="20"></lucide-icon>
+        </button>
+        
+        <button (click)="nextModalImage()" 
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 backdrop-blur-sm text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300">
+          <lucide-icon [name]="'chevron-right'" [size]="20"></lucide-icon>
+        </button>
+      </div>
+      
+      <!-- Thumbnails -->
+      <div class="p-5 md:p-6">
+        <div class="flex space-x-2 overflow-x-auto pb-2">
+          <button *ngFor="let image of galleryImages; let i = index"
+                  (click)="goToModalImage(i)"
+                  [class]="i === modalImageIndex 
+                    ? 'flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-primary-500' 
+                    : 'flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-gray-400'">
+            <img [src]="image.src" [alt]="image.alt" class="w-full h-full object-cover">
+          </button>
+        </div>
+        
+        <!-- Contador -->
+        <div class="text-center mt-3 md:mt-4 text-gray-400 text-sm">
+          {{ modalImageIndex + 1 }} de {{ galleryImages.length }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer *ngIf="!embedded"></app-footer>
+</div>
