@@ -1,0 +1,59 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#7C3AED;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A78BFA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F472B6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle with enhanced gradient and shadow -->
+  <circle cx="32" cy="32" r="30" fill="url(#gradient)" filter="url(#glow)"/>
+  <circle cx="32" cy="32" r="30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- Letter I with enhanced depth and styling -->
+  <rect x="28" y="16" width="8" height="32" rx="4" fill="white" filter="url(#shadow)"/>
+  <rect x="29" y="17" width="6" height="30" rx="3" fill="url(#accent)"/>
+  
+  <!-- Dot on I with enhanced styling -->
+  <circle cx="32" cy="12" r="3" fill="white" filter="url(#shadow)"/>
+  <circle cx="32" cy="12" r="2" fill="url(#accent)"/>
+  
+  <!-- Enhanced geometric elements with better positioning -->
+  <rect x="18" y="18" width="3" height="3" rx="1.5" fill="rgba(255,255,255,0.7)" transform="rotate(45 19.5 19.5)"/>
+  <rect x="43" y="43" width="3" height="3" rx="1.5" fill="rgba(255,255,255,0.5)" transform="rotate(45 44.5 44.5)"/>
+  <rect x="46" y="18" width="2" height="2" rx="1" fill="rgba(255,255,255,0.4)" transform="rotate(30 47 19)"/>
+  <rect x="16" y="46" width="2" height="2" rx="1" fill="rgba(255,255,255,0.3)" transform="rotate(-30 17 47)"/>
+  
+  <!-- Enhanced accent lines with better spacing -->
+  <rect x="20" y="30" width="24" height="1.5" rx="0.75" fill="rgba(255,255,255,0.8)"/>
+  <rect x="22" y="34" width="20" height="0.8" rx="0.4" fill="url(#accent)"/>
+  <rect x="24" y="36" width="16" height="0.6" rx="0.3" fill="rgba(255,255,255,0.5)"/>
+  
+  <!-- Enhanced corner accents -->
+  <circle cx="20" cy="20" r="1.2" fill="url(#accent)"/>
+  <circle cx="44" cy="44" r="1.2" fill="url(#accent)"/>
+  <circle cx="48" cy="20" r="1" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="16" cy="48" r="1" fill="rgba(255,255,255,0.7)"/>
+  
+  <!-- Additional subtle elements for depth -->
+  <circle cx="24" cy="24" r="0.8" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="40" cy="40" r="0.8" fill="rgba(255,255,255,0.2)"/>
+</svg>
