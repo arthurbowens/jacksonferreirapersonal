@@ -1,30 +1,31 @@
-<div class="min-h-screen bg-dark-900" id="contato">
+<div class="min-h-screen bg-[#FFF7FB]" id="contato" [ngClass]="{ 'layout-with-sidebar': !embedded }">
   <app-header *ngIf="!embedded"></app-header>
   
   <!-- Hero Section -->
-  <section class="pt-20 pb-16 bg-gradient-to-br from-dark-800 to-dark-900">
+  <section class="pt-20 pb-16 bg-[#FFF7FB]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        Entre em <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">contato</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0A1F44] mb-6">
+        Entre em <span class="text-[#0A1F44]">contato</span>
       </h1>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+      <p class="text-xl text-[#4C9FDC] mb-8 max-w-2xl mx-auto">
         Estamos aqui para ajudar. Fale conosco e descubra como podemos transformar seu negócio.
       </p>
     </div>
   </section>
 
   <!-- Contato via WhatsApp -->
-  <section class="py-16 bg-dark-800">
+  <section class="py-16 bg-[#FFF1F6]">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-white mb-6">Fale com a gente pelo WhatsApp</h2>
-      <p class="text-lg text-gray-300 mb-8">Atendimento rápido e personalizado. Clique no botão abaixo e fale diretamente com um especialista.</p>
+      <h2 class="text-3xl font-bold text-[#0A1F44] mb-6">Quer Lotar Sua Agenda com Pacientes Premium? Fale com um Especialista.</h2>
+      <p class="text-lg text-[#4C9FDC] mb-8">Atendimento rápido e personalizado para profissionais de saúde que buscam previsibilidade de agendamentos.</p>
       <a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais." target="_blank" rel="noopener" 
-         class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-lg text-white bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-        <lucide-icon [name]="'message-circle'" [size]="22" class="mr-2"></lucide-icon>
-        Falar no WhatsApp
+         class="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-lg text-white bg-[#32C787] hover:bg-[#2DB378] transition-all duration-300 shadow-lg hover:shadow-xl gap-3">
+        <span class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+          <lucide-icon [name]="'message-circle'" [size]="20"></lucide-icon>
+        </span>
+        Chamar Especialista no WhatsApp
       </a>
-      <div class="mt-6 text-gray-400 text-sm space-y-1">
-        <div><strong>Número:</strong> +55 48 98828-1035</div>
+      <div class="mt-6 text-[#4C9FDC] text-sm space-y-1">
         <div><strong>Local:</strong> Florianópolis, SC — Atendimento remoto em todo o país</div>
         <div><strong>Resposta:</strong> em até 24h</div>
       </div>

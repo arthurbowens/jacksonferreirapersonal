@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-dark-900" id="trabalhos">
+<div class="min-h-screen bg-dark-900" id="trabalhos" [ngClass]="{ 'layout-with-sidebar': !embedded }">
   <app-header *ngIf="!embedded"></app-header>
   
   <!-- Hero Section removido a pedido do cliente -->

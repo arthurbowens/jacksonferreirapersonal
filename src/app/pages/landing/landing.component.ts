@@ -4,7 +4,6 @@ import { HeaderComponent } from '../../shared/components/header/header.component
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { HomeComponent } from '../home/home.component';
 import { FuncionalidadesComponent } from '../funcionalidades/funcionalidades.component';
-import { TrabalhosComponent } from '../trabalhos/trabalhos.component';
 import { SobreComponent } from '../sobre/sobre.component';
 import { ContatoComponent } from '../contato/contato.component';
 
@@ -17,7 +16,6 @@ import { ContatoComponent } from '../contato/contato.component';
     FooterComponent,
     HomeComponent,
     FuncionalidadesComponent,
-    TrabalhosComponent,
     SobreComponent,
     ContatoComponent
   ],

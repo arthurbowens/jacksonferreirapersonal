@@ -1,93 +1,137 @@
-<header class="bg-dark-900/95 backdrop-blur-md shadow-soft fixed w-full top-0 z-50 border-b border-dark-700">
-  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-18">
-      <!-- Logo -->
-      <div class="flex-shrink-0">
-        <a routerLink="/" class="flex items-center space-x-3 group">
-          <img src="assets/images/logo-impulso.svg" alt="ImpulsoDigital Logo" class="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300">
-          <span class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
-            ImpulsoDigital
-          </span>
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-1">
-          <a routerLink="/" fragment="home" routerLinkActive="text-primary-400" 
-             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
-            Home
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-4"></span>
-          </a>
-          <a routerLink="/" fragment="funcionalidades" routerLinkActive="text-primary-400"
-             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
-            Funcionalidades
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
-          </a>
-          <a routerLink="/" fragment="sobre" routerLinkActive="text-primary-400"
-             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
-            Sobre
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
-          </a>
-          <a routerLink="/" fragment="trabalhos" routerLinkActive="text-primary-400"
-             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
-            Trabalhos
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
-          </a>
-          <a routerLink="/" fragment="contato" routerLinkActive="text-primary-400"
-             class="text-gray-300 hover:text-primary-400 px-4 py-2 text-sm font-medium transition-all duration-200 rounded-lg hover:bg-dark-800 relative group">
-            Contato
-            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-400 transition-all duration-200 group-hover:w-4"></span>
-          </a>
-        </div>
-      </div>
-
-          <!-- CTA Button -->
-          <div class="hidden md:block">
-            <a routerLink="/" fragment="contato"
-               class="bg-gradient-to-r from-primary-600 to-accent-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:from-primary-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2 group">
-              <span>Quero Conhecer</span>
-              <lucide-icon [name]="'arrow-right'" [size]="16" class="group-hover:translate-x-1 transition-transform duration-200"></lucide-icon>
-            </a>
-          </div>
-
-      <!-- Mobile menu button -->
-      <div class="md:hidden menu-container">
-        <button (click)="toggleMenu()" 
-                class="text-gray-300 hover:text-primary-400 focus:outline-none focus:text-primary-400 p-3 rounded-lg hover:bg-dark-800 transition-all duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center">
-          <lucide-icon [name]="isMenuOpen ? 'x' : 'menu'" [size]="24"></lucide-icon>
-        </button>
-      </div>
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-screen bg-[#FFF9FC] border-r border-[#EFDDE8] z-50 shadow-soft transition-all duration-300 overflow-hidden"
+       [class.w-72]="isSidebarOpen"
+       [class.w-20]="!isSidebarOpen">
+  <div class="w-full flex flex-col transition-all duration-300"
+       [class.p-6]="isSidebarOpen"
+       [class.p-3]="!isSidebarOpen">
+    <div class="relative flex items-center mb-8">
+      <a routerLink="/"
+         class="flex items-center group min-w-0"
+         [class.space-x-3]="isSidebarOpen"
+         [class.justify-center]="!isSidebarOpen"
+         [class.w-full]="!isSidebarOpen"
+         [class.pr-10]="isSidebarOpen">
+        <img src="assets/images/logoimpulso.png" alt="ImpulsoDigital Logo"
+             class="object-contain rounded-xl bg-white shadow ring-1 ring-[#D9EAF8] group-hover:scale-105 transition-transform duration-300"
+             [style.width.px]="isSidebarOpen ? 44 : 36"
+             [style.height.px]="isSidebarOpen ? 44 : 36">
+        <span class="text-xl font-bold text-[#0A1F44] tracking-tight whitespace-nowrap transition-opacity duration-200"
+              [class.opacity-0]="!isSidebarOpen"
+              [class.w-0]="!isSidebarOpen"
+              [class.overflow-hidden]="!isSidebarOpen">
+          ImpulsoDigital
+        </span>
+      </a>
+      <button (click)="toggleSidebar()"
+              class="absolute top-1/2 -translate-y-1/2 -right-3 rounded-full border border-[#E9D2A8] bg-white text-[#0A1F44] hover:text-[#C5A059] hover:border-[#C5A059] w-7 h-7 flex items-center justify-center shadow-sm transition-all duration-200 focus:outline-none"
+              [attr.aria-label]="isSidebarOpen ? 'Fechar sidebar' : 'Abrir sidebar'">
+        <span class="text-base leading-none font-semibold">{{ isSidebarOpen ? '‹' : '›' }}</span>
+      </button>
     </div>
 
-    <!-- Mobile Navigation -->
-    <div class="md:hidden transition-all duration-300 ease-in-out" 
-         [class.max-h-0]="!isMenuOpen" 
+    <nav class="flex flex-col gap-2">
+      <a routerLink="/" fragment="home" routerLinkActive="text-[#0A1F44]"
+         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+         [class.px-4]="isSidebarOpen"
+         [class.px-0]="!isSidebarOpen"
+         [class.justify-start]="isSidebarOpen"
+         [class.justify-center]="!isSidebarOpen"
+         [attr.title]="!isSidebarOpen ? 'Home' : null">
+        <lucide-icon [name]="'house'" [size]="18"></lucide-icon>
+        <span [class.hidden]="!isSidebarOpen">Home</span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a routerLink="/" fragment="funcionalidades" routerLinkActive="text-[#0A1F44]"
+         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+         [class.px-4]="isSidebarOpen"
+         [class.px-0]="!isSidebarOpen"
+         [class.justify-start]="isSidebarOpen"
+         [class.justify-center]="!isSidebarOpen"
+         [attr.title]="!isSidebarOpen ? 'Funcionalidades' : null">
+        <lucide-icon [name]="'zap'" [size]="18"></lucide-icon>
+        <span [class.hidden]="!isSidebarOpen">Funcionalidades</span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a routerLink="/" fragment="sobre" routerLinkActive="text-[#0A1F44]"
+         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+         [class.px-4]="isSidebarOpen"
+         [class.px-0]="!isSidebarOpen"
+         [class.justify-start]="isSidebarOpen"
+         [class.justify-center]="!isSidebarOpen"
+         [attr.title]="!isSidebarOpen ? 'Sobre' : null">
+        <lucide-icon [name]="'users'" [size]="18"></lucide-icon>
+        <span [class.hidden]="!isSidebarOpen">Sobre</span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+      <a routerLink="/" fragment="contato" routerLinkActive="text-[#0A1F44]"
+         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+         [class.px-4]="isSidebarOpen"
+         [class.px-0]="!isSidebarOpen"
+         [class.justify-start]="isSidebarOpen"
+         [class.justify-center]="!isSidebarOpen"
+         [attr.title]="!isSidebarOpen ? 'Contato' : null">
+        <lucide-icon [name]="'message-circle'" [size]="18"></lucide-icon>
+        <span [class.hidden]="!isSidebarOpen">Contato</span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+      </a>
+    </nav>
+
+    <div class="mt-auto pt-6">
+      <a routerLink="/" fragment="contato"
+         class="bg-[#C5A059] text-white rounded-xl font-semibold text-sm hover:bg-[#CBAA6A] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+         [class.px-6]="isSidebarOpen"
+         [class.py-3.5]="isSidebarOpen"
+         [class.px-0]="!isSidebarOpen"
+         [class.py-0]="!isSidebarOpen"
+         [class.w-12]="!isSidebarOpen"
+         [class.h-12]="!isSidebarOpen"
+         [attr.title]="!isSidebarOpen ? 'Quero Conhecer' : null">
+        <lucide-icon [name]="'arrow-right'" [size]="16" class="group-hover:translate-x-1 transition-transform duration-200"></lucide-icon>
+        <span [class.hidden]="!isSidebarOpen">Quero Conhecer</span>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<!-- Mobile Header -->
+<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#FFF9FC]/95 backdrop-blur-md border-b border-[#EFDDE8] menu-container">
+  <nav class="px-4 sm:px-6">
+    <div class="h-16 flex items-center justify-between">
+      <a routerLink="/" class="flex items-center space-x-2">
+        <img src="assets/images/logoimpulso.png" alt="ImpulsoDigital Logo" class="w-9 h-9 object-contain rounded-xl bg-white shadow ring-1 ring-[#D9EAF8]">
+        <span class="text-lg font-bold text-[#0A1F44]">ImpulsoDigital</span>
+      </a>
+
+      <button (click)="toggleMenu()"
+              class="text-[#4C9FDC] hover:text-[#0A1F44] focus:outline-none p-2 rounded-lg hover:bg-[#EEF6FD] transition-all duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center">
+        <lucide-icon [name]="isMenuOpen ? 'x' : 'menu'" [size]="24"></lucide-icon>
+      </button>
+    </div>
+
+    <div class="transition-all duration-300 ease-in-out"
+         [class.max-h-0]="!isMenuOpen"
          [class.max-h-96]="isMenuOpen"
          [class.overflow-hidden]="!isMenuOpen">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-800/95 backdrop-blur-md border-t border-dark-700">
+      <div class="pb-4 space-y-1 border-t border-[#D9EAF8]">
         <a routerLink="/" fragment="home" (click)="closeMenu()"
-           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Home
         </a>
         <a routerLink="/" fragment="funcionalidades" (click)="closeMenu()"
-           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Funcionalidades
         </a>
         <a routerLink="/" fragment="sobre" (click)="closeMenu()"
-           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Sobre
         </a>
-        <a routerLink="/" fragment="trabalhos" (click)="closeMenu()"
-           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
-          Trabalhos
-        </a>
         <a routerLink="/" fragment="contato" (click)="closeMenu()"
-           class="text-gray-300 hover:text-primary-400 block px-4 py-3 text-base font-medium rounded-lg hover:bg-dark-700 transition-all duration-200">
+           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Contato
         </a>
         <a routerLink="/" fragment="contato" (click)="closeMenu()"
-           class="bg-gradient-to-r from-primary-600 to-accent-600 text-white block px-4 py-3 text-base font-semibold rounded-xl mt-4 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+           class="bg-[#C5A059] text-white block px-5 py-3.5 text-base font-semibold rounded-xl mt-4 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:bg-[#CBAA6A]">
           Quero Conhecer
         </a>
       </div>

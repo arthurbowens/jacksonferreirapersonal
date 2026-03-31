@@ -29,32 +29,32 @@ export class HomeComponent implements OnInit {
   features: Feature[] = [
     {
       icon: 'smartphone',
-      title: 'Site moderno, rápido e responsivo',
-      description: 'Seu site funciona perfeitamente em qualquer dispositivo, do desktop ao celular.',
+      title: 'Sua Clínica Aberta 24h por Dia.',
+      description: 'Atraia pacientes qualificados do Google e Instagram com uma estrutura que nunca fecha. Previsibilidade de agendamentos reais.',
       highlight: true
     },
     {
       icon: 'clock',
-      title: 'Entrega garantida em até 7 dias úteis',
-      description: 'Agilidade sem abrir mão da qualidade. Seu site pronto em uma semana.',
+      title: 'Seu Posicionamento Premium no Ar em 7 Dias Úteis.',
+      description: 'Agilidade sem abrir mão da credibilidade. Esteja pronto para prospectar pacientes de alto ticket rapidamente.',
       highlight: false
     },
     {
       icon: 'palette',
-      title: 'Design 100% adaptado à identidade da sua marca',
-      description: 'Visual sob medida, pensado para destacar sua identidade.',
+      title: 'Credibilidade e Autoridade Digital Instantânea.',
+      description: 'Visual sob medida, pensado para transmitir confiança ao paciente de saúde exigente antes mesmo dele marcar.',
       highlight: false
     },
     {
       icon: 'layers',
-      title: 'Tudo que sua empresa precisa em um só lugar',
-      description: 'Formulário de contato, mapa, redes sociais, WhatsApp e mais.',
+      title: 'Controle e Rastreamento Total de Pacientes.',
+      description: 'Integração direta com WhatsApp, formulário de contato e monitoramento completo de conversões.',
       highlight: false
     },
     {
       icon: 'zap',
-      title: 'SEO e performance otimizados',
-      description: 'Páginas rápidas, bem indexadas e preparadas para ranquear melhor.',
+      title: 'Domine as Buscas Locais no Google.',
+      description: 'Apareça na hora exata que o paciente premium está procurando pela sua especialidade na sua região.',
       highlight: false
     },
     {

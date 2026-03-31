@@ -6,8 +6,19 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-/* Estilos para tema escuro */
+/* Base clara para o visual clinico */
 body {
-  background-color: #0f172a;
-  color: #f1f5f9;
+  background-color: #FFF7FB;
+  color: #0A1F44;
+}
+
+@media (min-width: 1024px) {
+  .layout-with-sidebar {
+    padding-left: 18rem;
+    transition: padding-left 0.3s ease;
+  }
+
+  body.sidebar-collapsed .layout-with-sidebar {
+    padding-left: 5rem;
+  }
 }
