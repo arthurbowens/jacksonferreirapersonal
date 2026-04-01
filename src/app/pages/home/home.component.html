@@ -108,7 +108,7 @@
     </div>
   </section>
 
-      <section class="py-20 bg-[#0b0f14]" *ngIf="!embedded">
+      <section class="py-20 bg-[#0b0f14]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -138,19 +138,21 @@
     </div>
   </section>
 
-  <section class="py-16 bg-[#11161f]" *ngIf="!embedded">
+  <section class="py-16 bg-[#11161f]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#32C787]/15 text-[#32C787] text-sm font-medium border border-[#32C787]/30 mb-5">
+          ★ 4.9 de média em avaliações
+        </div>
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-          Exemplo real e garantia
+          Depoimentos de clientes
         </h2>
         <p class="text-xl text-gray-300">
-          Um personal que recebia poucas mensagens por dia passou a receber muito mais contatos qualificados
-          depois de organizar tudo em uma pagina simples.
+          Feedbacks de personal trainers que usam a estrutura para gerar mais conversas e fechar mais alunos no WhatsApp.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <app-testimonial *ngFor="let testimonial of testimonials" [testimonial]="testimonial"></app-testimonial>
       </div>
 

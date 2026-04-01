@@ -67,24 +67,73 @@ export class HomeComponent implements OnInit {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Rafael Mendes',
+      name: 'Lucas Pereira',
       role: 'Personal Trainer',
-      company: 'Consultoria Online',
-      content: 'Depois da página, os contatos no WhatsApp chegaram muito mais qualificados e eu comecei a fechar mais alunos.',
+      company: 'Avaliacao no Google',
+      content: 'Depois que a pagina entrou no ar, comecei a receber muito mais gente pronta para fechar no WhatsApp. Mudou totalmente meu fluxo.',
       rating: 5
     },
     {
-      name: 'Camila Rocha',
-      role: 'Personal',
-      company: 'Treino Presencial',
-      content: 'Agora meu método está claro e os alunos chegam entendendo melhor o processo. Economizo muito tempo no atendimento.',
+      name: 'Mariana Costa',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'O aluno agora chega entendendo meu metodo e os valores. Minhas conversas no direct ficaram mais objetivas e produtivas.',
       rating: 5
     },
     {
-      name: 'Bruno Alves',
-      role: 'Coach de Performance',
-      company: 'Treino Híbrido',
-      content: 'A organização da oferta na página deixou minha comunicação muito mais profissional e as conversões melhoraram.',
+      name: 'Felipe Martins',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Eu perdia muito tempo com curioso. Com a pagina, os contatos chegam filtrados e a taxa de fechamento melhorou bastante.',
+      rating: 5
+    },
+    {
+      name: 'Aline Souza',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Em menos de uma semana eu ja sentia mais movimento no WhatsApp. A pagina deixou tudo claro para quem quer contratar.',
+      rating: 5
+    },
+    {
+      name: 'Gustavo Nunes',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Minha autoridade subiu muito. A pessoa olha a pagina e ja chega no WhatsApp mais confiante para fechar consultoria.',
+      rating: 5
+    },
+    {
+      name: 'Renata Oliveira',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Antes eu explicava tudo no direct. Agora a pagina faz esse trabalho por mim e eu consigo focar em fechar e atender melhor.',
+      rating: 5
+    },
+    {
+      name: 'Thiago Almeida',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'A estrutura ficou simples e muito eficiente. O numero de conversas qualificadas no WhatsApp aumentou nos primeiros dias.',
+      rating: 5
+    },
+    {
+      name: 'Carla Ferreira',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Hoje os alunos chegam com menos objecoes porque ja entenderam meu processo na pagina. Fecho mais rapido e com menos atrito.',
+      rating: 5
+    },
+    {
+      name: 'Bruno Carvalho',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'A pagina melhorou meu posicionamento e me ajudou a parar de depender so de direct aleatorio. Ficou muito mais profissional.',
+      rating: 5
+    },
+    {
+      name: 'Patricia Ramos',
+      role: 'Personal Trainer',
+      company: 'Avaliacao no Google',
+      content: 'Eu queria algo direto para vender consultoria online e funcionou. Mais mensagem qualificada e mais aluno entrando no programa.',
       rating: 5
     }
   ];

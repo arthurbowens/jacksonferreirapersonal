@@ -13,6 +13,19 @@ import { LucideAngularModule } from 'lucide-angular';
 export class HeaderComponent implements OnInit, OnDestroy {
   isMenuOpen = false;
   isSidebarOpen = true;
+  private readonly handleDocumentPointer = (event: Event) => {
+    if (!this.isMenuOpen || !isPlatformBrowser(this.platformId)) return;
+
+    const path = typeof event.composedPath === 'function' ? event.composedPath() : [];
+    const clickedInsideMenu = path.some(
+      (node) => node instanceof HTMLElement && node.classList.contains('menu-container')
+    );
+
+    if (!clickedInsideMenu) {
+      this.isMenuOpen = false;
+      this.updateMobileMenuBodyClass();
+    }
+  };
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
@@ -25,29 +38,30 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.updateSidebarBodyClass();
     }
 
-    // Fecha menu ao clicar fora - apenas no browser
     if (isPlatformBrowser(this.platformId)) {
-      document.addEventListener('click', (event) => {
-        const target = event.target as HTMLElement;
-        if (!target.closest('.menu-container')) {
-          this.isMenuOpen = false;
-        }
-      });
+      document.addEventListener('click', this.handleDocumentPointer);
+      document.addEventListener('touchstart', this.handleDocumentPointer, { passive: true });
     }
   }
 
   ngOnDestroy() {
     if (isPlatformBrowser(this.platformId)) {
       document.body.classList.remove('sidebar-collapsed');
+      document.body.classList.remove('mobile-menu-open');
+      document.removeEventListener('click', this.handleDocumentPointer);
+      document.removeEventListener('touchstart', this.handleDocumentPointer);
     }
   }
 
-  toggleMenu() {
+  toggleMenu(event?: Event) {
+    event?.stopPropagation();
     this.isMenuOpen = !this.isMenuOpen;
+    this.updateMobileMenuBodyClass();
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.updateMobileMenuBodyClass();
   }
 
   toggleSidebar() {
@@ -62,5 +76,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private updateSidebarBodyClass() {
     if (!isPlatformBrowser(this.platformId)) return;
     document.body.classList.toggle('sidebar-collapsed', !this.isSidebarOpen);
+  }
+
+  private updateMobileMenuBodyClass() {
+    if (!isPlatformBrowser(this.platformId)) return;
+    document.body.classList.toggle('mobile-menu-open', this.isMenuOpen);
   }
 }
