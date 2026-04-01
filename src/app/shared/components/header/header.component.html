@@ -1,5 +1,5 @@
 <!-- Desktop Sidebar -->
-<aside class="hidden lg:flex fixed left-0 top-0 h-screen bg-[#FFF9FC] border-r border-[#EFDDE8] z-50 shadow-soft transition-all duration-300 overflow-hidden"
+<aside class="hidden lg:flex fixed left-0 top-0 h-screen bg-[#0f141b] border-r border-[#1f2937] z-50 shadow-soft transition-all duration-300 overflow-hidden"
        [class.w-72]="isSidebarOpen"
        [class.w-20]="!isSidebarOpen">
   <div class="w-full flex flex-col transition-all duration-300"
@@ -8,31 +8,29 @@
     <div class="relative flex items-center mb-8">
       <a routerLink="/"
          class="flex items-center group min-w-0"
-         [class.space-x-3]="isSidebarOpen"
          [class.justify-center]="!isSidebarOpen"
-         [class.w-full]="!isSidebarOpen"
+         [class.justify-start]="isSidebarOpen"
+         [class.w-full]="true"
          [class.pr-10]="isSidebarOpen">
-        <img src="assets/images/logoimpulso.png" alt="ImpulsoDigital Logo"
-             class="object-contain rounded-xl bg-white shadow ring-1 ring-[#D9EAF8] group-hover:scale-105 transition-transform duration-300"
-             [style.width.px]="isSidebarOpen ? 44 : 36"
-             [style.height.px]="isSidebarOpen ? 44 : 36">
-        <span class="text-xl font-bold text-[#0A1F44] tracking-tight whitespace-nowrap transition-opacity duration-200"
-              [class.opacity-0]="!isSidebarOpen"
-              [class.w-0]="!isSidebarOpen"
-              [class.overflow-hidden]="!isSidebarOpen">
-          ImpulsoDigital
-        </span>
+        <img *ngIf="isSidebarOpen"
+             src="assets/images/logo-impulso-personal.svg"
+             alt="ImpulsoDigital Logo"
+             class="object-contain group-hover:scale-[1.02] transition-transform duration-300 w-[200px] h-[56px]">
+        <img *ngIf="!isSidebarOpen"
+             src="assets/images/logo-impulso-mark.svg"
+             alt="ImpulsoDigital Mark"
+             class="object-contain w-10 h-10">
       </a>
       <button (click)="toggleSidebar()"
-              class="absolute top-1/2 -translate-y-1/2 -right-3 rounded-full border border-[#E9D2A8] bg-white text-[#0A1F44] hover:text-[#C5A059] hover:border-[#C5A059] w-7 h-7 flex items-center justify-center shadow-sm transition-all duration-200 focus:outline-none"
+              class="absolute top-1/2 -translate-y-1/2 -right-3 rounded-full border border-[#374151] bg-[#111827] text-white hover:text-[#32C787] hover:border-[#32C787] w-7 h-7 flex items-center justify-center shadow-sm transition-all duration-200 focus:outline-none"
               [attr.aria-label]="isSidebarOpen ? 'Fechar sidebar' : 'Abrir sidebar'">
         <span class="text-base leading-none font-semibold">{{ isSidebarOpen ? '‹' : '›' }}</span>
       </button>
     </div>
 
     <nav class="flex flex-col gap-2">
-      <a routerLink="/" fragment="home" routerLinkActive="text-[#0A1F44]"
-         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+      <a routerLink="/" fragment="home" routerLinkActive="text-white"
+         class="text-gray-200 hover:text-[#32C787] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
          [class.px-4]="isSidebarOpen"
          [class.px-0]="!isSidebarOpen"
          [class.justify-start]="isSidebarOpen"
@@ -40,10 +38,10 @@
          [attr.title]="!isSidebarOpen ? 'Home' : null">
         <lucide-icon [name]="'house'" [size]="18"></lucide-icon>
         <span [class.hidden]="!isSidebarOpen">Home</span>
-        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#32C787] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
       </a>
-      <a routerLink="/" fragment="funcionalidades" routerLinkActive="text-[#0A1F44]"
-         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+      <a routerLink="/" fragment="funcionalidades" routerLinkActive="text-white"
+         class="text-gray-200 hover:text-[#32C787] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
          [class.px-4]="isSidebarOpen"
          [class.px-0]="!isSidebarOpen"
          [class.justify-start]="isSidebarOpen"
@@ -51,10 +49,10 @@
          [attr.title]="!isSidebarOpen ? 'Funcionalidades' : null">
         <lucide-icon [name]="'zap'" [size]="18"></lucide-icon>
         <span [class.hidden]="!isSidebarOpen">Funcionalidades</span>
-        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#32C787] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
       </a>
-      <a routerLink="/" fragment="sobre" routerLinkActive="text-[#0A1F44]"
-         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+      <a routerLink="/" fragment="sobre" routerLinkActive="text-white"
+         class="text-gray-200 hover:text-[#32C787] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
          [class.px-4]="isSidebarOpen"
          [class.px-0]="!isSidebarOpen"
          [class.justify-start]="isSidebarOpen"
@@ -62,10 +60,10 @@
          [attr.title]="!isSidebarOpen ? 'Sobre' : null">
         <lucide-icon [name]="'users'" [size]="18"></lucide-icon>
         <span [class.hidden]="!isSidebarOpen">Sobre</span>
-        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#32C787] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
       </a>
-      <a routerLink="/" fragment="contato" routerLinkActive="text-[#0A1F44]"
-         class="text-[#0A1F44] hover:text-[#C5A059] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
+      <a routerLink="/" fragment="contato" routerLinkActive="text-white"
+         class="text-gray-200 hover:text-[#32C787] py-3 text-sm font-semibold rounded-xl transition-all duration-200 relative group flex items-center"
          [class.px-4]="isSidebarOpen"
          [class.px-0]="!isSidebarOpen"
          [class.justify-start]="isSidebarOpen"
@@ -73,13 +71,13 @@
          [attr.title]="!isSidebarOpen ? 'Contato' : null">
         <lucide-icon [name]="'message-circle'" [size]="18"></lucide-icon>
         <span [class.hidden]="!isSidebarOpen">Contato</span>
-        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#C5A059] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+        <span *ngIf="isSidebarOpen" class="absolute left-4 right-4 -bottom-0.5 h-px bg-[#32C787] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
       </a>
     </nav>
 
     <div class="mt-auto pt-6">
       <a routerLink="/" fragment="contato"
-         class="bg-[#C5A059] text-white rounded-xl font-semibold text-sm hover:bg-[#CBAA6A] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+         class="bg-[#32C787] text-white rounded-xl font-semibold text-sm hover:bg-[#2DB378] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
          [class.px-6]="isSidebarOpen"
          [class.py-3.5]="isSidebarOpen"
          [class.px-0]="!isSidebarOpen"
@@ -95,16 +93,15 @@
 </aside>
 
 <!-- Mobile Header -->
-<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#FFF9FC]/95 backdrop-blur-md border-b border-[#EFDDE8] menu-container">
+<header class="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#0f141b]/95 backdrop-blur-md border-b border-[#1f2937] menu-container">
   <nav class="px-4 sm:px-6">
     <div class="h-16 flex items-center justify-between">
-      <a routerLink="/" class="flex items-center space-x-2">
-        <img src="assets/images/logoimpulso.png" alt="ImpulsoDigital Logo" class="w-9 h-9 object-contain rounded-xl bg-white shadow ring-1 ring-[#D9EAF8]">
-        <span class="text-lg font-bold text-[#0A1F44]">ImpulsoDigital</span>
+      <a routerLink="/" class="flex items-center">
+        <img src="assets/images/logo-impulso-personal.svg" alt="ImpulsoDigital Logo" class="w-48 h-11 object-contain">
       </a>
 
       <button (click)="toggleMenu()"
-              class="text-[#4C9FDC] hover:text-[#0A1F44] focus:outline-none p-2 rounded-lg hover:bg-[#EEF6FD] transition-all duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center">
+              class="text-gray-200 hover:text-[#32C787] focus:outline-none p-2 rounded-lg hover:bg-[#111827] transition-all duration-200 min-w-[44px] min-h-[44px] flex items-center justify-center">
         <lucide-icon [name]="isMenuOpen ? 'x' : 'menu'" [size]="24"></lucide-icon>
       </button>
     </div>
@@ -113,25 +110,25 @@
          [class.max-h-0]="!isMenuOpen"
          [class.max-h-96]="isMenuOpen"
          [class.overflow-hidden]="!isMenuOpen">
-      <div class="pb-4 space-y-1 border-t border-[#D9EAF8]">
+      <div class="pb-4 space-y-1 border-t border-[#1f2937]">
         <a routerLink="/" fragment="home" (click)="closeMenu()"
-           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
+           class="text-gray-200 hover:text-[#32C787] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Home
         </a>
         <a routerLink="/" fragment="funcionalidades" (click)="closeMenu()"
-           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
+           class="text-gray-200 hover:text-[#32C787] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Funcionalidades
         </a>
         <a routerLink="/" fragment="sobre" (click)="closeMenu()"
-           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
+           class="text-gray-200 hover:text-[#32C787] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Sobre
         </a>
         <a routerLink="/" fragment="contato" (click)="closeMenu()"
-           class="text-[#0A1F44] hover:text-[#C5A059] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
+           class="text-gray-200 hover:text-[#32C787] block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200">
           Contato
         </a>
         <a routerLink="/" fragment="contato" (click)="closeMenu()"
-           class="bg-[#C5A059] text-white block px-5 py-3.5 text-base font-semibold rounded-xl mt-4 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:bg-[#CBAA6A]">
+           class="bg-[#32C787] text-white block px-5 py-3.5 text-base font-semibold rounded-xl mt-4 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:bg-[#2DB378]">
           Quero Conhecer
         </a>
       </div>

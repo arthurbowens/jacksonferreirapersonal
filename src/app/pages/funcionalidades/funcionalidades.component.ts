@@ -34,13 +34,13 @@ export class FuncionalidadesComponent implements OnInit {
     {
       icon: 'message-circle',
       title: 'Botão WhatsApp',
-      description: 'Integração direta com WhatsApp para receber agendamentos e consultas.',
+      description: 'Integração direta com WhatsApp para receber novos alunos e fechar consultorias.',
       highlight: false
     },
     {
       icon: 'map-pin',
       title: 'Mapa de Localização',
-      description: 'Pacientes encontram sua clínica ou consultório facilmente com mapa integrado.',
+      description: 'Mostre onde você atende e facilite o contato de alunos presenciais da sua região.',
       highlight: false
     },
     {

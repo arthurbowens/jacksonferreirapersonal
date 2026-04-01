@@ -1,9 +1,9 @@
-<div class="group bg-white rounded-3xl p-8 hover:bg-[#F8FBFF] transition-all duration-500 border border-[#D9EAF8] hover:border-[#4C9FDC]/40 hover:shadow-2xl hover:shadow-[#4C9FDC]/10 relative overflow-hidden h-full flex flex-col"
+<div class="group bg-[#111827] rounded-3xl p-8 hover:bg-[#0f172a] transition-all duration-500 border border-[#1f2937] hover:border-[#32C787]/40 hover:shadow-2xl hover:shadow-[#32C787]/10 relative overflow-hidden h-full flex flex-col"
      [class.ring-2]="feature.highlight"
      [class.ring-primary-500]="feature.highlight"
      [class.bg-gradient-to-br]="feature.highlight"
-     [class.from-white]="feature.highlight"
-     [class.to-accent-100]="feature.highlight">
+     [class.from-dark-800]="feature.highlight"
+     [class.to-dark-900]="feature.highlight">
   
   <!-- Background Pattern -->
   <div class="absolute top-0 right-0 w-32 h-32 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
@@ -15,9 +15,7 @@
        [class.bg-gradient-to-br]="feature.highlight"
        [class.from-primary-500]="feature.highlight"
        [class.to-primary-600]="feature.highlight"
-       [class.bg-gradient-to-br]="!feature.highlight"
-      [class.from-secondary-50]="!feature.highlight"
-      [class.to-secondary-100]="!feature.highlight">
+       [class.bg-dark-900]="!feature.highlight">
     <lucide-icon [name]="feature.icon" [size]="28" 
                  [class.text-white]="feature.highlight"
                  [class.text-primary-400]="!feature.highlight"
@@ -25,12 +23,12 @@
   </div>
 
   <!-- Título -->
-  <h3 class="text-2xl font-bold text-[#0A1F44] mb-4 relative z-10 group-hover:text-[#12356C] transition-colors duration-300 min-h-[56px]">
+  <h3 class="text-2xl font-bold text-white mb-4 relative z-10 group-hover:text-[#32C787] transition-colors duration-300 min-h-[56px]">
     {{ feature.title }}
   </h3>
 
   <!-- Descrição -->
-  <p class="text-[#4C9FDC] leading-relaxed text-lg relative z-10 group-hover:text-[#3A8BC7] transition-colors duration-300 min-h-[72px]">
+  <p class="text-gray-300 leading-relaxed text-lg relative z-10 group-hover:text-gray-200 transition-colors duration-300 min-h-[72px]">
     {{ feature.description }}
   </p>
 
@@ -38,8 +36,8 @@
 
   <!-- Badge de destaque -->
   <div *ngIf="feature.highlight" 
-       class="mt-6 inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-[#C5A059]/12 text-[#C5A059] border border-[#C5A059]/35">
-    <lucide-icon [name]="'star'" [size]="16" class="mr-2 text-[#C5A059] fill-current"></lucide-icon>
+       class="mt-6 inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-[#32C787]/15 text-[#32C787] border border-[#32C787]/35">
+    <lucide-icon [name]="'star'" [size]="16" class="mr-2 text-[#32C787] fill-current"></lucide-icon>
     Mais Popular
   </div>
 

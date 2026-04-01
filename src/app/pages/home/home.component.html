@@ -1,8 +1,8 @@
-<div class="min-h-screen bg-[#FFF7FB]" id="home" [ngClass]="{ 'layout-with-sidebar': !embedded }">
+<div class="min-h-screen bg-[#0b0f14]" id="home" [ngClass]="{ 'layout-with-sidebar': !embedded }">
   <app-header *ngIf="!embedded"></app-header>
   
   <!-- Hero Section -->
-  <section class="pt-20 pb-16 bg-[#FFF7FB] relative overflow-hidden">
+  <section class="pt-20 pb-16 bg-[#0b0f14] relative overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
     <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-400/20 to-accent-400/20 rounded-full blur-3xl"></div>
@@ -14,57 +14,60 @@
         <div class="space-y-8 animate-fade-in">
           <div class="space-y-6">
             <!-- Badge -->
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#4C9FDC]/10 text-[#C5A059] text-sm font-medium border border-[#4C9FDC]/30 backdrop-blur-sm">
-              <span class="w-2 h-2 bg-[#4C9FDC] rounded-full mr-2 animate-pulse-slow"></span>
-              Conectando sua marca ao sucesso digital
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#32C787]/15 text-[#32C787] text-sm font-medium border border-[#32C787]/30 backdrop-blur-sm">
+              <span class="w-2 h-2 bg-[#32C787] rounded-full mr-2 animate-pulse-slow"></span>
+              Especial para personal trainers
             </div>
             
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-10">
-              <span class="text-[#0A1F44]">Landing Pages de Alta Conversão</span>
-              <span class="text-[#0A1F44]"> para </span>
-              <span class="text-[#56BC88]">Profissionais de Saúde.</span>
+              <span class="text-white">Mais alunos para sua consultoria pelo WhatsApp</span>
             </h1>
-            <p class="text-lg text-[#4C9FDC] leading-relaxed max-w-2xl">
-              Transformamos Nutricionistas, Dentistas e Clínicas de Saúde em Autoridades Digitais.
-              Estruturas premium focadas em previsibilidade de agendamentos no WhatsApp.
+            <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+              Sem precisar ficar explicando tudo no direct.
             </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-white font-semibold max-w-2xl">
+              <div class="bg-[#111827] rounded-xl px-3 py-2 border border-[#1f2937]">✔ Pronta em até 2 dias</div>
+              <div class="bg-[#111827] rounded-xl px-3 py-2 border border-[#1f2937]">✔ Sem complicação</div>
+              <div class="bg-[#111827] rounded-xl px-3 py-2 border border-[#1f2937]">✔ Foco total em trazer alunos</div>
+            </div>
+            <p class="text-[#32C787] font-semibold">Ideal para personal que vende consultoria online</p>
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4">
                 <a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais." target="_blank" rel="noopener"
                    (click)="onCTAClick('fale-no-whatsapp', 'hero')"
-                   class="bg-[#32C787] text-white px-7 py-3.5 rounded-xl font-bold text-base hover:bg-[#2DB378] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
+                   class="bg-[#32C787] text-white px-9 py-[18px] rounded-xl font-bold text-lg hover:bg-[#2DB378] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3 group">
                   <span class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
                     <lucide-icon [name]="'message-circle'" [size]="18"></lucide-icon>
                   </span>
-              <span>Quero Falar com um Especialista</span>
+              <span>Falar no WhatsApp</span>
                 </a>
           </div>
 
           <!-- Prova Social -->
-          <div class="bg-[#F8F8F6] rounded-2xl p-5 mt-6 border border-[#E5E0D7]">
-            <div class="flex flex-wrap items-center justify-center gap-8 text-sm text-[#4C9FDC]">
+          <div class="bg-[#111827] rounded-2xl p-5 mt-6 border border-[#1f2937]">
+            <div class="flex flex-wrap items-center justify-center gap-8 text-sm text-gray-300">
               <div class="flex items-center space-x-2">
-                <lucide-icon [name]="'clock'" [size]="16" class="text-[#4C9FDC]"></lucide-icon>
-                <span class="font-semibold">Prazo de 7 dias úteis</span>
+                <lucide-icon [name]="'clock'" [size]="16" class="text-[#32C787]"></lucide-icon>
+                <span class="font-semibold">Sem perder tempo com curiosos</span>
               </div>
               <div class="flex items-center space-x-2">
-                <lucide-icon [name]="'shield-check'" [size]="16" class="text-[#4C9FDC]"></lucide-icon>
-                <span class="font-semibold">Garantia de qualidade</span>
+                <lucide-icon [name]="'shield-check'" [size]="16" class="text-[#32C787]"></lucide-icon>
+                <span class="font-semibold">Ajustes ate ficar do seu jeito</span>
               </div>
               <div class="flex items-center space-x-2">
-                <lucide-icon [name]="'zap'" [size]="16" class="text-[#4C9FDC]"></lucide-icon>
-                <span class="font-semibold">Tecnologia moderna</span>
+                <lucide-icon [name]="'zap'" [size]="16" class="text-[#32C787]"></lucide-icon>
+                <span class="font-semibold">Mais contato chegando pra fechar</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="relative animate-slide-up max-w-[520px] w-full mx-auto lg:ml-auto">
-          <div class="bg-white rounded-3xl shadow-2xl p-2 border border-[#E5E0D7] relative z-10">
+          <div class="bg-[#111827] rounded-3xl shadow-2xl p-2 border border-[#1f2937] relative z-10">
             <img
-              src="assets/home.png"
-              alt="Preview de agenda com agendamentos via WhatsApp"
+              src="assets/images/consultoriahome.png"
+              alt="Exemplo de pagina para personal trainer"
               class="w-full h-auto rounded-2xl object-cover"
             />
           </div>
@@ -73,20 +76,26 @@
     </div>
   </section>
 
-      <section class="py-20 bg-[#FFF1F6] relative">
+      <section class="py-20 bg-[#11161f] relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-20">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#4C9FDC]/10 text-[#C5A059] text-sm font-medium mb-6 border border-[#4C9FDC]/30">
-              <lucide-icon [name]="'zap'" [size]="16" class="mr-2 text-[#4C9FDC]"></lucide-icon>
-              Funcionalidades que fazem a diferença
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#32C787]/15 text-[#32C787] text-sm font-medium mb-6 border border-[#32C787]/30">
+              <lucide-icon [name]="'zap'" [size]="16" class="mr-2 text-[#32C787]"></lucide-icon>
+              Beneficios diretos
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-[#0A1F44] mb-6">
-              Desenvolvemos sites que trazem resultados
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              O que muda quando voce tem uma pagina que vende
             </h2>
-            <p class="text-xl text-[#4C9FDC] max-w-3xl mx-auto leading-relaxed">
-              Nossa equipe é especializada em conectar o seu negócio com o digital, 
-              sempre focada em desenvolver soluções de alta conversão, performance e usabilidade.
-            </p>
+            <div class="max-w-3xl mx-auto space-y-3 text-left text-gray-100 text-lg">
+              <p>✔ Mais alunos entrando no seu WhatsApp todos os dias</p>
+              <p>✔ Menos tempo respondendo curioso</p>
+              <p>✔ Seu método explicado de forma simples</p>
+              <p>✔ Mais gente chegando pronta pra fechar</p>
+            </div>
+            <div class="max-w-3xl mx-auto mt-6 bg-[#0f141b] rounded-2xl border border-[#1f2937] p-5 text-left">
+              <p class="text-white font-medium">"Depois da pagina, comecei a receber muito mais gente interessada todo dia."</p>
+              <p class="text-gray-400 text-sm mt-1">- Personal Trainer</p>
+            </div>
           </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
@@ -99,49 +108,68 @@
     </div>
   </section>
 
-      <section class="py-20 bg-[#FFF7FB]" *ngIf="!embedded">
+      <section class="py-20 bg-[#0b0f14]" *ngIf="!embedded">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-[#0A1F44] mb-6">
-              SEU SITE COM Design exclusivo
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              Como funciona
             </h2>
             <div class="flex items-center justify-center space-x-2 mb-8">
-              <lucide-icon [name]="'star'" [size]="20" class="text-[#C5A059] fill-current"></lucide-icon>
-              <span class="text-lg font-semibold text-[#C5A059]">Criado especialmente para seu negócio</span>
+              <lucide-icon [name]="'star'" [size]="20" class="text-[#32C787] fill-current"></lucide-icon>
+              <span class="text-lg font-semibold text-[#32C787]">Fluxo direto para gerar mais alunos</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
-            <div *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]" 
-                 class="aspect-square bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-2xl flex items-center justify-center text-2xl font-bold text-primary-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-primary-500/30">
-              {{i}}
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            <div class="bg-[#111827] rounded-2xl p-5 border border-[#1f2937] text-gray-100 shadow-sm">1. O aluno entra na sua pagina</div>
+            <div class="bg-[#111827] rounded-2xl p-5 border border-[#1f2937] text-gray-100 shadow-sm">2. Entende como funciona sua consultoria</div>
+            <div class="bg-[#111827] rounded-2xl p-5 border border-[#1f2937] text-gray-100 shadow-sm">3. Ve resultados e beneficios</div>
+            <div class="bg-[#111827] rounded-2xl p-5 border border-[#1f2937] text-gray-100 shadow-sm">4. Clica e fala com voce no WhatsApp</div>
             </div>
-          </div>
 
           <div class="text-center">
-            <a routerLink="/funcionalidades" 
-               (click)="onCTAClick('ver-funcionalidades', 'portfolio')"
-               class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-xl font-semibold text-lg hover:from-primary-700 hover:to-accent-700 transition-all duration-300 shadow-lg hover:shadow-xl group">
-              <span>VER FUNCIONALIDADES</span>
+            <a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+vim+do+site+e+quero+uma+p%C3%A1gina+de+consultoria+para+personal." target="_blank" rel="noopener"
+               (click)="onCTAClick('whatsapp-como-funciona', 'como-funciona')"
+               class="inline-flex items-center px-9 py-[18px] bg-[#32C787] text-white rounded-xl font-semibold text-lg hover:bg-[#2DB378] transition-all duration-300 shadow-lg hover:shadow-xl group">
+              <span>Quero mais alunos no WhatsApp</span>
               <lucide-icon [name]="'arrow-right'" [size]="20" class="ml-2 group-hover:translate-x-1 transition-transform duration-200"></lucide-icon>
             </a>
           </div>
     </div>
   </section>
 
-  <section class="py-16 bg-[#FFF1F6]" *ngIf="!embedded">
+  <section class="py-16 bg-[#11161f]" *ngIf="!embedded">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-[#0A1F44] mb-4">
-          O que nossos clientes dizem
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+          Exemplo real e garantia
         </h2>
-        <p class="text-xl text-[#4C9FDC]">
-          Veja o que alguns de nossos parceiros têm a dizer sobre a qualidade e o impacto de nossos sites.
+        <p class="text-xl text-gray-300">
+          Um personal que recebia poucas mensagens por dia passou a receber muito mais contatos qualificados
+          depois de organizar tudo em uma pagina simples.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <app-testimonial *ngFor="let testimonial of testimonials" [testimonial]="testimonial"></app-testimonial>
+      </div>
+
+      <div class="text-center max-w-4xl mx-auto mt-12 space-y-4">
+        <p class="text-lg text-white font-medium">
+          Voce nao precisa entender de site, design ou tecnologia.
+          Eu cuido de tudo pra voce - voce so precisa focar em atender seus alunos.
+        </p>
+        <p class="text-gray-300">
+          Se voce nao gostar do resultado, ajusto ate ficar do jeito certo pra voce.
+        </p>
+        <a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+quero+entender+como+funciona+a+p%C3%A1gina+para+personal." target="_blank" rel="noopener"
+           (click)="onCTAClick('cta-final-whatsapp', 'final')"
+           class="inline-flex items-center justify-center px-9 py-[18px] rounded-xl font-semibold text-lg text-white bg-[#32C787] hover:bg-[#2DB378] transition-all duration-300 shadow-lg hover:shadow-xl gap-3 mt-3">
+          <span class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
+            <lucide-icon [name]="'message-circle'" [size]="20"></lucide-icon>
+          </span>
+          Me chama no WhatsApp e eu te mostro como isso pode funcionar pra você
+        </a>
       </div>
     </div>
   </section>

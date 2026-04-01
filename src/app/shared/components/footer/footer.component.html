@@ -1,57 +1,54 @@
-<footer class="bg-[#FFF1F6] text-[#0A1F44] relative overflow-hidden border-t border-[#EFDDE8]">
+<footer class="bg-[#0f141b] text-white relative overflow-hidden border-t border-[#1f2937]">
   <!-- Background Pattern -->
-  <div class="absolute inset-0 opacity-30">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#FDECF3] to-[#F6E8EF] rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#FDECF3] to-[#F6E8EF] rounded-full blur-3xl"></div>
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#32C787]/20 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#32C787]/20 to-transparent rounded-full blur-3xl"></div>
   </div>
   
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
       <!-- Logo e Descrição -->
       <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center space-x-3 mb-6">
-          <img src="assets/images/logoimpulso.png" alt="ImpulsoDigital Logo" class="w-20 h-20 object-cover rounded-2xl bg-white/95 p-1.5 shadow-xl ring-1 ring-primary-200/40">
-          <h3 class="text-3xl font-bold text-[#0A1F44]">
-            ImpulsoDigital
-          </h3>
+        <div class="mb-6">
+          <img src="assets/images/logo-impulso-personal.svg" alt="ImpulsoDigital Logo" class="w-64 h-20 object-contain">
         </div>
-        <p class="text-[#4C9FDC] mb-8 max-w-md text-lg leading-relaxed">
-          Impulso Digital - Especialistas em Landing Pages de Alta Performance para o setor da Saúde.
-          Transformando cliques em consultas e seguidores em pacientes reais.
+        <p class="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
+          Impulso Digital - Especialistas em landing pages para personal trainers.
+          Transformando seguidores em alunos e cliques em consultorias fechadas.
         </p>
         
       </div>
 
       <!-- Links Rápidos -->
       <div>
-        <h4 class="text-xl font-bold text-[#0A1F44] mb-6">Links Rápidos</h4>
+        <h4 class="text-xl font-bold text-white mb-6">Links Rápidos</h4>
         <ul class="space-y-3">
-          <li><a routerLink="/" class="text-[#4C9FDC] hover:text-[#C5A059] transition-colors duration-200 hover:translate-x-1 inline-block">Home</a></li>
-          <li><a routerLink="/funcionalidades" class="text-[#4C9FDC] hover:text-[#C5A059] transition-colors duration-200 hover:translate-x-1 inline-block">Funcionalidades</a></li>
-          <li><a routerLink="/sobre" class="text-[#4C9FDC] hover:text-[#C5A059] transition-colors duration-200 hover:translate-x-1 inline-block">Sobre</a></li>
-          <li><a routerLink="/contato" class="text-[#4C9FDC] hover:text-[#C5A059] transition-colors duration-200 hover:translate-x-1 inline-block">Contato</a></li>
+          <li><a routerLink="/" class="text-gray-300 hover:text-[#32C787] transition-colors duration-200 hover:translate-x-1 inline-block">Home</a></li>
+          <li><a routerLink="/funcionalidades" class="text-gray-300 hover:text-[#32C787] transition-colors duration-200 hover:translate-x-1 inline-block">Funcionalidades</a></li>
+          <li><a routerLink="/sobre" class="text-gray-300 hover:text-[#32C787] transition-colors duration-200 hover:translate-x-1 inline-block">Sobre</a></li>
+          <li><a routerLink="/contato" class="text-gray-300 hover:text-[#32C787] transition-colors duration-200 hover:translate-x-1 inline-block">Contato</a></li>
         </ul>
       </div>
 
       <!-- Contato -->
       <div>
-        <h4 class="text-xl font-bold text-[#0A1F44] mb-6">Contato</h4>
+        <h4 class="text-xl font-bold text-white mb-6">Contato</h4>
         <div class="space-y-4">
           <a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+vim+do+site+e+gostaria+de+saber+mais." target="_blank" rel="noopener"
              class="inline-flex items-center justify-center w-full px-5 py-3.5 rounded-xl font-semibold text-white bg-[#32C787] hover:bg-[#2DB378] transition-all duration-300 shadow-md hover:shadow-lg gap-2">
             <span class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
               <lucide-icon [name]="'message-circle'" [size]="16"></lucide-icon>
             </span>
-            Falar com Especialista
+            Me chama no WhatsApp
           </a>
-          <p class="text-[#4C9FDC] text-sm">Resposta em até 24h</p>
+          <p class="text-gray-300 text-sm">Resposta em até 24h</p>
           <div class="flex items-center space-x-4 group">
-            <div class="w-10 h-10 bg-[#4C9FDC]/15 rounded-lg flex items-center justify-center group-hover:bg-[#4C9FDC]/25 transition-colors duration-200">
-              <lucide-icon [name]="'map-pin'" [size]="18" class="text-[#4C9FDC]"></lucide-icon>
+            <div class="w-10 h-10 bg-[#32C787]/15 rounded-lg flex items-center justify-center group-hover:bg-[#32C787]/25 transition-colors duration-200">
+              <lucide-icon [name]="'map-pin'" [size]="18" class="text-[#32C787]"></lucide-icon>
             </div>
             <div>
-              <p class="text-[#0A1F44] font-medium">Florianópolis, SC</p>
-              <p class="text-[#4C9FDC] text-sm">Atendimento remoto em todo o país</p>
+              <p class="text-white font-medium">Florianópolis, SC</p>
+              <p class="text-gray-300 text-sm">Atendimento remoto em todo o país</p>
             </div>
           </div>
         </div>
@@ -59,16 +56,22 @@
     </div>
 
     <!-- Linha Divisória -->
-    <div class="border-t border-[#EFDDE8] mt-12 pt-8">
+    <div class="border-t border-[#1f2937] mt-12 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
-        <p class="text-[#4C9FDC] text-sm">
+        <p class="text-gray-400 text-sm">
           © {{ currentYear }} ImpulsoDigital. Todos os direitos reservados.
         </p>
         <div class="flex space-x-8 mt-4 md:mt-0">
-          <a routerLink="/termos" class="text-[#4C9FDC] hover:text-[#C5A059] text-sm transition-colors duration-200 hover:underline">Termos de Uso</a>
-          <a routerLink="/privacidade" class="text-[#4C9FDC] hover:text-[#C5A059] text-sm transition-colors duration-200 hover:underline">Política de Privacidade</a>
+          <a routerLink="/termos" class="text-gray-400 hover:text-[#32C787] text-sm transition-colors duration-200 hover:underline">Termos de Uso</a>
+          <a routerLink="/privacidade" class="text-gray-400 hover:text-[#32C787] text-sm transition-colors duration-200 hover:underline">Política de Privacidade</a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/5548988281035?text=Ol%C3%A1%2C+quero+uma+p%C3%A1gina+para+fechar+mais+alunos+na+minha+consultoria." target="_blank" rel="noopener"
+   class="fixed bottom-5 right-5 z-[60] bg-[#32C787] hover:bg-[#2DB378] text-white rounded-full px-5 py-3.5 shadow-xl transition-all duration-300 flex items-center gap-2">
+  <lucide-icon [name]="'message-circle'" [size]="18"></lucide-icon>
+  <span class="font-semibold text-sm">WhatsApp</span>
+</a>

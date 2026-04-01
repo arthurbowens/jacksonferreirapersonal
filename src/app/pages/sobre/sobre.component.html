@@ -1,65 +1,24 @@
-<div class="min-h-screen bg-[#FFF7FB]" id="sobre" [ngClass]="{ 'layout-with-sidebar': !embedded }">
+<div class="min-h-screen bg-[#0b0f14]" id="sobre" [ngClass]="{ 'layout-with-sidebar': !embedded }">
   <app-header *ngIf="!embedded"></app-header>
   
-  <!-- Hero Section -->
-  <section class="pt-20 pb-16 bg-[#FFF7FB]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#0A1F44] mb-6">
-        Somos Especialistas em Acelerar Resultados na Saúde.
+  <section class="pt-20 pb-20 bg-[#0b0f14]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
+        Quem vai fazer sua pagina
       </h1>
-      <p class="text-xl text-[#4C9FDC] mb-8 max-w-3xl mx-auto">
-        A Impulso Digital - Saúde surgiu de uma visão: todo profissional de saúde merece previsibilidade de faturamento. Transformamos a credibilidade técnica de Nutris e Dentistas em estruturas digitais de alta conversão, prontas para atrair pacientes qualificados.
+      <div class="bg-[#111827] rounded-3xl border border-[#1f2937] p-8 md:p-10">
+        <p class="text-xl text-gray-300 leading-relaxed mb-6">
+          Eu trabalho criando paginas simples focadas em trazer alunos direto pro WhatsApp.
+        </p>
+        <p class="text-lg text-white leading-relaxed">
+          A ideia e tirar de voce o tempo perdido explicando tudo no direct e te ajudar a fechar mais alunos com um processo mais organizado.
+        </p>
+      </div>
+      <p class="text-center text-[#32C787] font-semibold mt-6">
+        Ideal para personal que vende consultoria online
       </p>
     </div>
   </section>
-
-  <!-- Missão, Visão, Valores -->
-  <section class="py-16 bg-[#FFF1F6]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-[#4C9FDC]/15 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#4C9FDC]/35">
-            <lucide-icon [name]="'target'" [size]="32" class="text-[#4C9FDC]"></lucide-icon>
-          </div>
-          <h3 class="text-xl font-semibold text-[#0A1F44] mb-3">Missão</h3>
-          <p class="text-[#4C9FDC]">Capacitar profissionais de saúde com ferramentas que convertem autoridade em pacientes reais.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-[#4C9FDC]/15 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#4C9FDC]/35">
-            <lucide-icon [name]="'users'" [size]="32" class="text-[#4C9FDC]"></lucide-icon>
-          </div>
-          <h3 class="text-xl font-semibold text-[#0A1F44] mb-3">Visão</h3>
-          <p class="text-[#4C9FDC]">Ser a principal aceleradora de resultados digitais para clínicas e consultórios premium no Brasil.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-[#4C9FDC]/15 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#4C9FDC]/35">
-            <lucide-icon [name]="'heart'" [size]="32" class="text-[#4C9FDC]"></lucide-icon>
-          </div>
-          <h3 class="text-xl font-semibold text-[#0A1F44] mb-3">Valores</h3>
-          <p class="text-[#4C9FDC]">Ética na saúde, precisão tecnológica, transparência e foco em ROI (Retorno sobre Investimento).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- História -->
-  <section class="py-16 bg-[#FFF7FB]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-[#0A1F44] mb-4">Nossa História</h2>
-        <p class="text-xl text-[#4C9FDC]">
-          Construindo crescimento previsível para profissionais da saúde
-        </p>
-      </div>
-      <div class="prose prose-lg mx-auto text-[#4C9FDC]">
-        <p>
-          A Impulso Digital - Saúde nasceu da necessidade de conectar pacientes qualificados a profissionais de excelência. Percebemos que muitos Nutris e Dentistas perdiam pacientes por falta de uma estrutura de conversão à altura de seus currículos. Hoje, desenvolvemos soluções que transformam autoridade em consultórios lotados no setor da saúde.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA removida a pedido do cliente -->
 
   <app-footer *ngIf="!embedded"></app-footer>
 </div>

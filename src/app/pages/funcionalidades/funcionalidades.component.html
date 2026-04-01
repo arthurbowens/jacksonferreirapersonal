@@ -1,21 +1,21 @@
-<div class="min-h-screen bg-[#FFF7FB]" id="funcionalidades" [ngClass]="{ 'layout-with-sidebar': !embedded }">
+<div class="min-h-screen bg-[#0b0f14]" id="funcionalidades" [ngClass]="{ 'layout-with-sidebar': !embedded }">
   <app-header *ngIf="!embedded"></app-header>
   
   <!-- Hero Section -->
-  <section class="pt-20 pb-16 bg-[#FFF7FB]">
+  <section class="pt-20 pb-16 bg-[#0b0f14]">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#0A1F44] mb-6">
-        Funcionalidades do seu <span class="text-[#0A1F44]">site profissional</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Funcionalidades do seu <span class="text-white">site profissional</span>
       </h1>
-      <p class="text-xl text-[#4C9FDC] mb-8 max-w-2xl mx-auto">
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
         Tudo que você precisa para ter um site completo e funcional 
-        para sua clínica ou consultório.
+        para vender sua consultoria como personal trainer.
       </p>
     </div>
   </section>
 
   <!-- Funcionalidades Grid -->
-  <section class="py-16 bg-[#FFF1F6]">
+  <section class="py-16 bg-[#11161f]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <app-card-feature *ngFor="let feature of features" [feature]="feature"></app-card-feature>

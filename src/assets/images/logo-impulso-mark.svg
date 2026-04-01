@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>ImpulsoDigital Mark</title>
+  <rect x="6" y="10" width="52" height="40" rx="12" fill="#32C787"/>
+  <path d="M16 50 L26 50 L16 58 Z" fill="#32C787"/>
+  <rect x="18" y="26" width="4" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="42" y="26" width="4" height="12" rx="2" fill="#FFFFFF"/>
+  <rect x="22" y="29" width="6" height="6" rx="2" fill="#FFFFFF"/>
+  <rect x="36" y="29" width="6" height="6" rx="2" fill="#FFFFFF"/>
+  <rect x="28" y="30" width="8" height="4" rx="2" fill="#FFFFFF"/>
+</svg>

@@ -29,32 +29,32 @@ export class HomeComponent implements OnInit {
   features: Feature[] = [
     {
       icon: 'smartphone',
-      title: 'Sua Clínica Aberta 24h por Dia.',
-      description: 'Atraia pacientes qualificados do Google e Instagram com uma estrutura que nunca fecha. Previsibilidade de agendamentos reais.',
+      title: 'Mais alunos chegando no seu WhatsApp',
+      description: 'Uma página simples que filtra melhor os interessados e aumenta o volume de contatos qualificados.',
       highlight: true
     },
     {
       icon: 'clock',
-      title: 'Seu Posicionamento Premium no Ar em 7 Dias Úteis.',
-      description: 'Agilidade sem abrir mão da credibilidade. Esteja pronto para prospectar pacientes de alto ticket rapidamente.',
+      title: 'Menos tempo explicando o básico',
+      description: 'O aluno chega mais preparado, entendendo sua consultoria antes de te chamar.',
       highlight: false
     },
     {
       icon: 'palette',
-      title: 'Credibilidade e Autoridade Digital Instantânea.',
-      description: 'Visual sob medida, pensado para transmitir confiança ao paciente de saúde exigente antes mesmo dele marcar.',
+      title: 'Seu método explicado com clareza',
+      description: 'Estrutura feita para mostrar proposta, diferenciais e benefícios de forma objetiva.',
       highlight: false
     },
     {
       icon: 'layers',
-      title: 'Controle e Rastreamento Total de Pacientes.',
-      description: 'Integração direta com WhatsApp, formulário de contato e monitoramento completo de conversões.',
+      title: 'Processo simples e organizado',
+      description: 'Você recebe uma estrutura clara para apresentar sua consultoria e fechar com mais facilidade.',
       highlight: false
     },
     {
       icon: 'zap',
-      title: 'Domine as Buscas Locais no Google.',
-      description: 'Apareça na hora exata que o paciente premium está procurando pela sua especialidade na sua região.',
+      title: 'Fluxo direto para fechar no WhatsApp',
+      description: 'O visitante entende, confia e clica para falar com você no momento certo.',
       highlight: false
     },
     {
@@ -67,24 +67,24 @@ export class HomeComponent implements OnInit {
 
   testimonials: Testimonial[] = [
     {
-      name: 'Telma Oliveira',
-      role: 'Proprietária',
-      company: 'Lanchonete do Bairro',
-      content: 'Site profissional e moderno! Agora os clientes conseguem ver o cardápio e fazer pedidos pelo WhatsApp.',
+      name: 'Rafael Mendes',
+      role: 'Personal Trainer',
+      company: 'Consultoria Online',
+      content: 'Depois da página, os contatos no WhatsApp chegaram muito mais qualificados e eu comecei a fechar mais alunos.',
       rating: 5
     },
     {
-      name: 'Iago Murilo',
-      role: 'Barbeiro',
-      company: 'Barbearia Moderna',
-      content: 'Design que combina perfeitamente com meu negócio. Os clientes conseguem agendar horários facilmente.',
+      name: 'Camila Rocha',
+      role: 'Personal',
+      company: 'Treino Presencial',
+      content: 'Agora meu método está claro e os alunos chegam entendendo melhor o processo. Economizo muito tempo no atendimento.',
       rating: 5
     },
     {
-      name: 'Jared Michael',
-      role: 'Chef',
-      company: 'Restaurante Sabor',
-      content: 'Entrega rápida e site responsivo. Perfeito para mostrar nossos pratos e receber reservas.',
+      name: 'Bruno Alves',
+      role: 'Coach de Performance',
+      company: 'Treino Híbrido',
+      content: 'A organização da oferta na página deixou minha comunicação muito mais profissional e as conversões melhoraram.',
       rating: 5
     }
   ];
