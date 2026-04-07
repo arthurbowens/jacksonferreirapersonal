@@ -14,7 +14,7 @@ interface ResultadoCliente {
 })
 export class LpConsultoriaPage {
   readonly linkWhatsapp = `https://wa.me/5527997976623?text=${encodeURIComponent(
-    'Fala, quero saber como funciona a consultoria 👊'
+    'Fala, Jackson! Quero saber como funciona a consultoria.'
   )}`;
 
   readonly linkInstagram =
